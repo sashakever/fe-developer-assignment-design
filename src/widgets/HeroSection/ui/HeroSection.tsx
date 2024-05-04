@@ -60,4 +60,3 @@ const HeroSection: FC<Props> = ({className = ''}) => {
 };
 
 export default HeroSection;
-

@@ -1,6 +1,6 @@
 import '@/base/styles/custom-font.css';
 import '@/base/styles/globals.css';
-import {Header} from '@/widgets';
+import {Footer, Header} from '@/widgets';
 import type {Metadata} from 'next';
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
         <main className='flex min-h-screen flex-col items-center justify-between'>
           <Header />
           {children}
-          <footer className='w-full bg-emerald-700'>footer</footer>
+          <Footer />
         </main>
       </body>
     </html>

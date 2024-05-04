@@ -49,7 +49,7 @@ export const MobileMenu: FC<PropsWithChildren> = ({children}) => {
   return (
     <>
       <Button
-        className='aspect-square p-0'
+        className='aspect-square p-0 lg:hidden'
         variant='secondary'
         onClick={toggleMobileMenu}>
         {isOpen ? (
