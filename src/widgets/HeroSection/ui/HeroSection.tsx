@@ -43,16 +43,11 @@ const HeroSection: FC<Props> = ({className = ''}) => {
           {"The world's first\nplatform for Tokenizing\nAI blockchain projects"}
         </h1>
         <div className='flex flex-col justify-between gap-2 lg:h-12 lg:gap-0'>
-          <div className='h-[1px] w-full shrink-0 bg-[linear-gradient(90deg,#3D8BFF_0%,#AB23FF_100%)]' />
-          <p
-            className={clsx(
-              'text-lg font-bold leading-[130%] lg:text-[22px]',
-              'bg-[linear-gradient(90deg,#3D8BFF_0%,#AB23FF_100%)] [-webkit-background-clip:text]',
-              '[-webkit-text-fill-color:transparent] [background-clip:text] [text-fill-color:transparent]',
-            )}>
+          <div className='main-gradient h-[1px] w-full shrink-0' />
+          <span className='text-gradient text-lg font-bold leading-[130%] lg:text-[22px]'>
             Hold the Creon Pass NFT and earn passive income from AI Tools
-          </p>
-          <div className='h-[1px] w-full shrink-0 bg-[linear-gradient(90deg,#3D8BFF_0%,#AB23FF_100%)]' />
+          </span>
+          <div className='main-gradient h-[1px] w-full shrink-0' />
         </div>
       </div>
     </section>

@@ -10,6 +10,14 @@ html, body {
   @apply px-[15px] mx-auto max-w-[1470px];
 }
 
+.main-gradient {
+  @apply bg-[linear-gradient(90deg,#3D8BFF_0%,#AB23FF_100%)];
+}
+
+.text-gradient {
+  @apply main-gradient [-webkit-text-fill-color:transparent] bg-clip-text [text-fill-color:transparent] [-webkit-background-clip:text]
+}
+
 body {
   @apply bg-black;
 }
