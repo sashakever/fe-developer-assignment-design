@@ -21,7 +21,7 @@ const HeroSection: FC<Props> = ({className = ''}) => {
       )}>
       {width < BREAKPOINT_MEDIUM ? (
         <video
-          // autoPlay
+          autoPlay
           loop
           muted
           playsInline
@@ -30,7 +30,7 @@ const HeroSection: FC<Props> = ({className = ''}) => {
         />
       ) : (
         <video
-          // autoPlay
+          autoPlay
           loop
           muted
           playsInline

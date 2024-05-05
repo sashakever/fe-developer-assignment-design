@@ -4,31 +4,26 @@ import React, {FC} from 'react';
 
 import {Button, Divider} from '@/shared/ui';
 import clsx from 'clsx';
+import {useIntersectionObserver} from 'usehooks-ts';
+
+import {LIST} from '../constants';
 
 type Props = {
   className?: string;
 };
 
-const list = [
-  {
-    id: 1,
-    label: 'Pre-launch investment opportunities for upcoming AI projects',
-  },
-  {
-    id: 2,
-    label: 'Free and early access to Creon built AI projects',
-  },
-  {
-    id: 3,
-    label: 'Higher allocation limits on the Creon AI Launchpad',
-  },
-  {
-    id: 4,
-    label: 'Revenue share distribution from Creon built AI projects',
-  },
-];
-
 const CreonSection: FC<Props> = ({className = ''}) => {
+  const refVideo = React.useRef<HTMLVideoElement | null>(null);
+  const {ref} = useIntersectionObserver({
+    threshold: 0.5,
+    freezeOnceVisible: true,
+    onChange: (isIntersecting) => {
+      if (isIntersecting) {
+        refVideo.current?.play();
+      }
+    },
+  });
+
   return (
     <section
       className={clsx(
@@ -42,7 +37,7 @@ const CreonSection: FC<Props> = ({className = ''}) => {
           {`The Creon NFT pass unlocks access to AI projects, the Creon launchpad, and a ticket to generate passive income through AI-driven tools`}
         </p>
         <ul className='mb-10 flex flex-col gap-2.5'>
-          {list.map((item) => (
+          {LIST.map((item) => (
             <li
               key={item.id}
               className={clsx(
@@ -58,9 +53,11 @@ const CreonSection: FC<Props> = ({className = ''}) => {
           <span className='text-lg font-bold'>Buy Creon Pass</span>
         </Button>
       </div>
-      <div className='relative mb-10 aspect-square w-full shrink-0 lg:mb-0 lg:w-[56%]'>
+      <div
+        ref={ref}
+        className='relative mb-10 aspect-square w-full shrink-0 lg:mb-0 lg:w-[56%]'>
         <video
-          // autoPlay
+          ref={refVideo}
           loop
           muted
           playsInline

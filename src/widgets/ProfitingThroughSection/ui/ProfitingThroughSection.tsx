@@ -3,12 +3,24 @@
 import React, {FC} from 'react';
 
 import clsx from 'clsx';
+import {useIntersectionObserver} from 'usehooks-ts';
 
 type Props = {
   className?: string;
 };
 
 const ProfitingThroughSection: FC<Props> = ({className = ''}) => {
+  const refVideo = React.useRef<HTMLVideoElement | null>(null);
+  const {ref} = useIntersectionObserver({
+    threshold: 0.8,
+    freezeOnceVisible: true,
+    onChange: (isIntersecting) => {
+      if (isIntersecting) {
+        refVideo.current?.play();
+      }
+    },
+  });
+
   return (
     <section
       className={clsx('main-container w-full py-10 lg:py-20', className)}>
@@ -21,9 +33,12 @@ const ProfitingThroughSection: FC<Props> = ({className = ''}) => {
         AI Innovation & Decentralization
       </p>
       <div className='flex w-full flex-col items-center gap-4 lg:flex-row'>
-        <div className='relative aspect-[1.95] w-full shrink-0 lg:w-[65%]'>
+        <div
+          ref={ref}
+          className='relative aspect-[1.95] w-full shrink-0 lg:w-[65%]'>
           <video
             // autoPlay
+            ref={refVideo}
             loop
             muted
             playsInline
