@@ -1,4 +1,9 @@
-import {CreonSection, HeroSection, ProfitingThroughSection} from '@/widgets';
+import {
+  CreonSection,
+  HeroSection,
+  OurVisionSection,
+  ProfitingThroughSection,
+} from '@/widgets';
 
 export default function Home() {
   return (
@@ -6,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <CreonSection />
       <ProfitingThroughSection />
+      <OurVisionSection />
     </>
   );
 }
