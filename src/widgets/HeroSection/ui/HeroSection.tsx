@@ -39,7 +39,7 @@ const HeroSection: FC<Props> = ({className = ''}) => {
         />
       )}
       <div className='main-container relative z-10 flex h-full flex-col items-start justify-end gap-10 pb-10 lg:pb-[102px]'>
-        <h1 className='font-monument text-[32px] font-normal uppercase leading-[110%] lg:whitespace-pre-line lg:text-[48px] xl:text-[68px]'>
+        <h1 className='heading lg:whitespace-pre-line'>
           {"The world's first\nplatform for Tokenizing\nAI blockchain projects"}
         </h1>
         <div className='flex flex-col justify-between gap-2 lg:h-12 lg:gap-0'>

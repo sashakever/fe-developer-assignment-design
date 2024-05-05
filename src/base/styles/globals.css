@@ -18,6 +18,10 @@ html, body {
   @apply main-gradient [-webkit-text-fill-color:transparent] bg-clip-text [text-fill-color:transparent] [-webkit-background-clip:text]
 }
 
+.heading {
+  @apply font-monument text-[32px] font-normal uppercase leading-[110%] lg:text-[48px] xl:text-[68px]
+}
+
 body {
   @apply bg-black;
 }

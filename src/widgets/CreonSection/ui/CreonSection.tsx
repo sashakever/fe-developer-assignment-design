@@ -32,13 +32,11 @@ const CreonSection: FC<Props> = ({className = ''}) => {
   return (
     <section
       className={clsx(
-        'main-container flex w-full flex-col-reverse items-center py-20 lg:flex-row',
+        'main-container flex w-full flex-col-reverse items-center py-10 lg:flex-row lg:py-20',
         className,
       )}>
       <div className='flex w-full flex-col lg:mr-11'>
-        <h2 className='mb-5 font-monument text-[32px] font-normal uppercase leading-[110%] lg:text-[48px] xl:text-[68px]'>
-          creon pass nft
-        </h2>
+        <h2 className='heading mb-5'>creon pass nft</h2>
         <Divider className='mb-5' />
         <p className='text-gradient mb-5 text-lg font-bold leading-[130%] lg:whitespace-pre-line lg:text-[22px]'>
           {`The Creon NFT pass unlocks access to AI projects, the Creon launchpad, and a ticket to generate passive income through AI-driven tools`}
