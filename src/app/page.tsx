@@ -1,6 +1,7 @@
 import {
   CreonSection,
   HeroSection,
+  ItemsWithVideoSection,
   OurVisionSection,
   ProfitingThroughSection,
 } from '@/widgets';
@@ -12,6 +13,7 @@ export default function Home() {
       <CreonSection />
       <ProfitingThroughSection />
       <OurVisionSection />
+      <ItemsWithVideoSection />
     </>
   );
 }

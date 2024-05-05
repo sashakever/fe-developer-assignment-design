@@ -37,7 +37,6 @@ const ProfitingThroughSection: FC<Props> = ({className = ''}) => {
           ref={ref}
           className='relative aspect-[1.95] w-full shrink-0 lg:w-[65%]'>
           <video
-            // autoPlay
             ref={refVideo}
             loop
             muted
