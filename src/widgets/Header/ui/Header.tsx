@@ -1,6 +1,6 @@
 'use client';
 
-import React, {FC, useRef} from 'react';
+import React, {FC, Suspense, useRef} from 'react';
 
 import {MobileMenu} from '@/features';
 import {LogoIcon} from '@/shared/assets';
@@ -40,9 +40,11 @@ const Header: FC<Props> = ({className = ''}) => {
         <Button className='mr-4 w-full lg:mr-0 lg:w-auto' variant='border'>
           Connect
         </Button>
-        <MobileMenu>
-          <Nav />
-        </MobileMenu>
+        <Suspense>
+          <MobileMenu>
+            <Nav />
+          </MobileMenu>
+        </Suspense>
       </div>
     </header>
   );
